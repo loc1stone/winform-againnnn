@@ -1,0 +1,128 @@
+﻿// Form1.Designer.cs (giao diện đầy đủ)
+namespace DijkstraWinForms
+{
+    partial class Form1
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        private System.Windows.Forms.ComboBox cmbStart;
+        private System.Windows.Forms.ComboBox cmbEnd;
+        private System.Windows.Forms.Button btnInit;
+        private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.ListBox lstResult;
+        private System.Windows.Forms.Label lblStart;
+        private System.Windows.Forms.Label lblEnd;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private void InitializeComponent()
+        {
+            this.cmbStart = new System.Windows.Forms.ComboBox();
+            this.cmbEnd = new System.Windows.Forms.ComboBox();
+            this.btnInit = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.lstResult = new System.Windows.Forms.ListBox();
+            this.lblStart = new System.Windows.Forms.Label();
+            this.lblEnd = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // cmbStart
+            // 
+            this.cmbStart.FormattingEnabled = true;
+            this.cmbStart.Location = new System.Drawing.Point(160, 25);
+            this.cmbStart.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbStart.Name = "cmbStart";
+            this.cmbStart.Size = new System.Drawing.Size(172, 24);
+            this.cmbStart.TabIndex = 0;
+            this.cmbStart.SelectedIndexChanged += new System.EventHandler(this.cmbStart_SelectedIndexChanged);
+            // 
+            // cmbEnd
+            // 
+            this.cmbEnd.FormattingEnabled = true;
+            this.cmbEnd.Location = new System.Drawing.Point(160, 74);
+            this.cmbEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbEnd.Name = "cmbEnd";
+            this.cmbEnd.Size = new System.Drawing.Size(172, 24);
+            this.cmbEnd.TabIndex = 1;
+            // 
+            // btnInit
+            // 
+            this.btnInit.Location = new System.Drawing.Point(360, 25);
+            this.btnInit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInit.Name = "btnInit";
+            this.btnInit.Size = new System.Drawing.Size(133, 31);
+            this.btnInit.TabIndex = 2;
+            this.btnInit.Text = "Khởi tạo mẫu";
+            this.btnInit.UseVisualStyleBackColor = true;
+            this.btnInit.Click += new System.EventHandler(this.btnInit_Click);
+            // 
+            // btnRun
+            // 
+            this.btnRun.Location = new System.Drawing.Point(360, 74);
+            this.btnRun.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(133, 31);
+            this.btnRun.TabIndex = 3;
+            this.btnRun.Text = "Tìm đường đi";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // lstResult
+            // 
+            this.lstResult.FormattingEnabled = true;
+            this.lstResult.ItemHeight = 16;
+            this.lstResult.Location = new System.Drawing.Point(27, 135);
+            this.lstResult.Margin = new System.Windows.Forms.Padding(4);
+            this.lstResult.Name = "lstResult";
+            this.lstResult.Size = new System.Drawing.Size(465, 196);
+            this.lstResult.TabIndex = 4;
+            this.lstResult.SelectedIndexChanged += new System.EventHandler(this.lstResult_SelectedIndexChanged);
+            // 
+            // lblStart
+            // 
+            this.lblStart.AutoSize = true;
+            this.lblStart.Location = new System.Drawing.Point(27, 28);
+            this.lblStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStart.Name = "lblStart";
+            this.lblStart.Size = new System.Drawing.Size(84, 16);
+            this.lblStart.TabIndex = 5;
+            this.lblStart.Text = "Đỉnh bắt đầu:";
+            // 
+            // lblEnd
+            // 
+            this.lblEnd.AutoSize = true;
+            this.lblEnd.Location = new System.Drawing.Point(27, 78);
+            this.lblEnd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnd.Name = "lblEnd";
+            this.lblEnd.Size = new System.Drawing.Size(84, 16);
+            this.lblEnd.TabIndex = 6;
+            this.lblEnd.Text = "Đỉnh kết thúc:";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(533, 369);
+            this.Controls.Add(this.cmbStart);
+            this.Controls.Add(this.cmbEnd);
+            this.Controls.Add(this.btnInit);
+            this.Controls.Add(this.btnRun);
+            this.Controls.Add(this.lstResult);
+            this.Controls.Add(this.lblStart);
+            this.Controls.Add(this.lblEnd);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "Form1";
+            this.Text = "Dijkstra - Tìm đường đi ngắn nhất";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+    }
+}
